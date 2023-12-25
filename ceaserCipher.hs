@@ -55,6 +55,7 @@ decrypt f index=do
     fileContent <- readFile f
     let cleanedText = clean_input fileContent
     let decryptContent = decode n cleanedText
+    print "decrypt.txt file generated. check your your src code folder"
     writeFile "decrypt.txt" decryptContent
 
 -- main decode logic which takes encrypt.txt file and index of the cipher 
