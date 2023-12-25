@@ -1,3 +1,5 @@
+-- PROBLEM 7
+
 import Data.Set as Set
 import System.IO  
 import Data.Char

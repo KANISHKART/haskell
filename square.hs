@@ -1,3 +1,5 @@
+-- PROBLEM 1
+
 --below is a recursion to check number is a sqrt 
 --iterating from 1 to sqrt input which user had given
 --if multiple itself equals, goes above or sqrt equals iteration will exit the recursion

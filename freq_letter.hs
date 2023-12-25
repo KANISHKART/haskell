@@ -1,3 +1,6 @@
+-- PROBLEM 2
+
+
 import Data.Char(toLower)
 
 -- This below function is used to calculate the count of a given char in a string

@@ -1,3 +1,5 @@
+-- PROBLEM 3
+
 import Data.Char(toLower)
 
 -- cities database

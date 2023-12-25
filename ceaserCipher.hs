@@ -1,3 +1,5 @@
+-- PROBLEM 6
+
 import System.IO  
 import Data.Char
 import System.Environment
@@ -61,7 +63,9 @@ decrypt f index=do
 -- main decode logic which takes encrypt.txt file and index of the cipher 
 -- this will check if the index is greater than 0 then it will continue by calling decrypt function
 -- else throw error message
-decode_file f index
+
+-- TEST with running the code > c_decrypt "encrypt.txt" 7
+c_decrypt f index
    | index >=0 = decrypt f index
    | otherwise = print "Enter positive cypher index"
 

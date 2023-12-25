@@ -1,3 +1,5 @@
+--PROBLEM 5
+
 import Data.Char(toLower)
 
 -- NOTE !!!!!
@@ -74,8 +76,8 @@ findClosest (x:xs) a
 --based on this it will give the answer as english or portuguese
 fetchLanguage :: String->String
 fetchLanguage l
-    | getFrequency (freq_letter_pc l) 'e' >= getFrequency (freq_letter_pc l) 'p'="The text is English"
-    | otherwise = "The text is Portuguese"
+    | getFrequency (freq_letter_pc l) 'e' >= getFrequency (freq_letter_pc l) 'p'="The text is in English"
+    | otherwise = "The text is in Portuguese"
 
 
 --the below two functions counFrequency & freq_letter will return the same as (problem 2)
