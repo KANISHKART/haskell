@@ -1,5 +1,9 @@
 import Data.Char(toLower)
 
+-- NOTE !!!!!
+-- Below code of countOf, CountOccurences, freq_letter_pc is same as problem 2 I have used those to extract frequency.
+-- after the sepration the code for langFinder is written.
+
 -- This below function is used to calculate the count of a given char in a string
 -- This is a recursive function which will iterate each element until is empty and check whether the element is a alphabet
 -- At the end it will return the count
@@ -91,10 +95,25 @@ freq_letter z=countFrequency (map toLower (filter (/=' ') z )) (length (filter (
 --4. fetchLanguage will count from previous input whether character 'e' is higher or 'p' depending on  it will return the language of the text.
 get_lang text=fetchLanguage (findClosest (freq_letter (clean_input text)) [])
 
+--This below code will 
+--1. take file as a input.
+--2. clean the text by keeping only alphabets.
+--3. return the language detected. 
+read_lang :: FilePath-> IO String
+read_lang f=do
+    fileContent <- readFile f
+    let cleanedText= clean_input fileContent
+    return (get_lang cleanedText)
+
 
 --clean the input text by removing special characters and space 
 --return only alphabets
 clean_input :: String->String
 clean_input z= [x| x<- z, x `elem` ['a'..'z']]
+
+
+
+
+
 
 
