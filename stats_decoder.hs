@@ -86,9 +86,14 @@ decrypt f index=do
     writeFile "decrypt.txt" decryptContent
 
 
--- This below logic will compare two list and 
+-- This below list comphrension logic will compare two list 
+-- and return length of matching words
 countMatchingWords list1 list2=length [x | x<-list1 , x `elem` list2]
 
+-- This below code will iterate each index from 0 to 26
+-- 1. it finds matching words to list1 and list2 
+-- 2. checks for the maximum matching words by accumulator result 
+-- 3. return the tuple with maximum (index, matchedWords).
 iterateIndex :: Int -> String -> [String] -> (Int, Int) ->(Int, Int) 
 iterateIndex 0 _ _ result = result
 iterateIndex n decryptText dictList result =do
@@ -99,9 +104,15 @@ iterateIndex n decryptText dictList result =do
     iterateIndex (n - 1) decryptText dictList updatedResult
 
 
-
-indexFinder :: IO ()
-indexFinder = do
+-- This function is the main logic
+-- 1. extract file content in the encrypted file "italy.txt.chp"
+-- 2. call extractUniqueWords function to generate "dict.txt" file
+-- 3. read contents of dict to a list 
+-- 4. call iterateIndex with step 1 , 3
+-- 5. decode the "italy.txt.chp" file content with maximum index
+-- 6. store the decrypted result in secret.txt file
+guess_index :: IO ()
+guess_index = do
     fileContent <- readFile "italy.txt.chp"
     let encryptFileText = clean_input fileContent
     extractUniqueWords
