@@ -1,3 +1,8 @@
+-- Kanishkar T (D23124630)
+
+-- Programming Paradigms. 
+-- Assignment 2 - HASKELL
+
 --PROBLEM 5
 
 import Data.Char(toLower)

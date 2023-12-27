@@ -1,3 +1,8 @@
+-- Kanishkar T (D23124630)
+
+-- Programming Paradigms. 
+-- Assignment 2 - HASKELL
+
 -- PROBLEM 1
 
 --below is a recursion to check number is a sqrt 

@@ -1,3 +1,8 @@
+-- Kanishkar T (D23124630)
+
+-- Programming Paradigms. 
+-- Assignment 2 - HASKELL
+
 -- PROBLEM 9
 
 -- In This below function I have defined a math series
