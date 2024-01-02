@@ -1,6 +1,7 @@
 -- Kanishkar T (D23124630)
 
 -- Programming Paradigms. 
+
 -- Assignment 2 - HASKELL
 
 -- PROBLEM 2
