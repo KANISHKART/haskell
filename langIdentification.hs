@@ -100,12 +100,15 @@ freq_letter z=countFrequency (map toLower (filter (/=' ') z )) (length (filter (
 --2. freq_letter is used to calculate the frequency in terms of percentage 
 --3. findClosest will map each character in the text to english (e) and portuguese (p) and form a string with p & e
 --4. fetchLanguage will count from previous input whether character 'e' is higher or 'p' depending on  it will return the language of the text.
+get_lang::String->String
 get_lang text=fetchLanguage (findClosest (freq_letter (clean_input text)) [])
 
 --This below code will 
 --1. take file as a input.
 --2. clean the text by keeping only alphabets.
 --3. return the language detected. 
+--4. eg:  read_lang "english.txt" 
+--5. eg:  read_lang "portuguese.txt"
 read_lang :: FilePath-> IO String
 read_lang f=do
     fileContent <- readFile f

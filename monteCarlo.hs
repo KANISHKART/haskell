@@ -19,7 +19,7 @@
 import System.Random
 
 
---below generate random will generate a float between 0 and 1
+-- below generate random will generate a float between 0 and 1
 -- randomRIO is used to generate the random value between numbers
 generateRandom :: IO Float
 generateRandom = randomRIO (0,1)
