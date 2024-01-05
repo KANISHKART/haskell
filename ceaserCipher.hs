@@ -67,9 +67,10 @@ decrypt f index=do
 
 -- main decode logic which takes encrypt.txt file and index of the cipher 
 -- this will check if the index is greater than 0 then it will continue by calling decrypt function
--- else throw error message
+-- else throw error messagee
 
 -- TEST with running the code > c_decrypt "encrypt.txt" 7
+c_decrypt:: FilePath-> Int->IO()
 c_decrypt f index
    | index >=0 = decrypt f index
    | otherwise = print "Enter positive cypher index"
