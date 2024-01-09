@@ -30,6 +30,7 @@ extractWords (x:xs) =do
 --Initially I had used removeDuplicates as it has complexity of o(n^2)  
 -- it was taking longer time to extract unique words.
 -- so I had used set to extract unique words
+-- below commented code contains that logic
 
 -- removeDuplicates []=[]
 -- removeDuplicates (x:xs)= x: removeDuplicates (filter (/=x) (x:xs))
@@ -96,10 +97,11 @@ decrypt f index=do
 
 -- This below list comphrension logic will compare two list 
 -- and return length of matching words
+countMatchingWords::[String]->[String]->Int
 countMatchingWords list1 list2=length [x | x<-list1 , x `elem` list2]
 
 -- This below code will iterate each index from 0 to 26
--- 1. it finds matching words to list1 and list2 
+-- 1. it finds matching words to list1 and list2, words "string" will get all words in a list
 -- 2. checks for the maximum matching words by accumulator result 
 -- 3. return the tuple with maximum (index, matchedWords).
 iterateIndex :: Int -> String -> [String] -> (Int, Int) ->(Int, Int) 

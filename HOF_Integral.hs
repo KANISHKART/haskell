@@ -11,7 +11,6 @@
 -- x1 = starting point of intergation interval
 -- x2 = ending point og integration interval
 -- n = number of intervals to divide the integration range
-
 integral :: (Float -> Float) -> Float -> Float -> Float -> Float
 integral f x1 x2 n =
 -- 1. calculates the width of each subinterval ('dx') by
